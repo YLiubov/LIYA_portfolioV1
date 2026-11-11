@@ -1,4 +1,4 @@
-/** EducationSection renders the current programme and expected graduation. */
+// EducationSection — организм: информация об обучении и ожидаемом выпуске.
 import { DisplayHeading } from '../atoms/DisplayHeading'
 import { SectionLabel } from '../atoms/SectionLabel'
 

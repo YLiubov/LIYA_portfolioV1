@@ -4,6 +4,17 @@ A React, TypeScript, and Vite frontend focused on the portfolio's content, compo
 
 DM Sans, Playfair Display, and Space Mono are bundled locally with `@fontsource`, so the site does not request fonts from an external service at runtime.
 
+## Структура проекта
+
+- `src/components/atoms/` — небольшие переиспользуемые элементы, например заголовок и ссылка-кнопка.
+- `src/components/molecules/` — составные элементы, например логотип и переключатель темы.
+- `src/components/organisms/` — крупные части страницы: шапка, секции и подвал.
+- `src/data/` — данные, которые используют компоненты: пункты меню и навыки.
+- `src/assets/` — изображения и другие ресурсы, импортируемые в коде.
+- `src/App.tsx` — собирает страницу и управляет общей темой и активным разделом.
+- `src/App.css` и `src/index.css` — стили страницы и общая палитра; отдельные компоненты также используют styled-components.
+- `public/` — файлы, доступные напрямую по адресу сайта, например значок вкладки.
+
 ## Development
 
 ```bash

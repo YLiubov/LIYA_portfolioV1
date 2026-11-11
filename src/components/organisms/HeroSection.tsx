@@ -1,4 +1,4 @@
-/** HeroSection renders the portfolio title, introduction, and section links. */
+// HeroSection — организм: первый экран с именем, представлением и ссылками.
 import { ActionLink } from '../atoms/ActionLink'
 
 export function HeroSection() {

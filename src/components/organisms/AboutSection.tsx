@@ -1,4 +1,4 @@
-/** AboutSection renders the developer's interests and current learning. */
+// AboutSection — организм: раздел обо мне, моих интересах и обучении.
 import { DisplayHeading } from '../atoms/DisplayHeading'
 import { SectionLabel } from '../atoms/SectionLabel'
 

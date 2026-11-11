@@ -1,4 +1,4 @@
-/** SkillsSection renders the grouped technologies from the skills data. */
+// SkillsSection — организм: таблица навыков из общего списка технологий.
 import { DisplayHeading } from '../atoms/DisplayHeading'
 import { SectionLabel } from '../atoms/SectionLabel'
 import { skillGroups } from '../../data/skills'

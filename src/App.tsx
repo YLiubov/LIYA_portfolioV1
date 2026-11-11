@@ -1,4 +1,4 @@
-/** App composes the page organisms and manages its theme and active section. */
+// App собирает секции страницы и управляет темой и активным пунктом меню.
 import { useEffect, useState } from 'react'
 import './App.css'
 import type { ColorTheme } from './components/molecules/ThemeToggle'
@@ -13,6 +13,7 @@ import { SiteFooter } from './components/organisms/SiteFooter'
 import { SiteHeader } from './components/organisms/SiteHeader'
 import { SkillsSection } from './components/organisms/SkillsSection'
 
+// Читаем тему из localStorage, чтобы сохранить выбор после перезагрузки.
 function getInitialTheme(): ColorTheme {
   try {
     return window.localStorage.getItem('color-mode') === 'dark' ? 'dark' : 'light'
@@ -34,6 +35,7 @@ function App() {
     }
   }, [theme])
 
+  // IntersectionObserver отслеживает видимые секции и обновляет навигацию при прокрутке.
   useEffect(() => {
     const sections = document.querySelectorAll<HTMLElement>('[data-nav-section]')
     const observer = new IntersectionObserver(
@@ -50,6 +52,7 @@ function App() {
     )
 
     sections.forEach((section) => observer.observe(section))
+    // Отключаем наблюдатель при удалении компонента.
     return () => observer.disconnect()
   }, [])
 
@@ -71,7 +74,6 @@ function App() {
           <ProfileSidebar
             activeSection={activeSection}
             theme={theme}
-            onThemeChange={setTheme}
           />
           <div className="content-column">
             <SectionIndex activeSection={activeSection} variant="mobile" />
@@ -82,10 +84,10 @@ function App() {
               <EducationSection />
               <ContactSection />
             </div>
-            <SiteFooter />
           </div>
         </div>
       </main>
+      <SiteFooter />
     </div>
   )
 }

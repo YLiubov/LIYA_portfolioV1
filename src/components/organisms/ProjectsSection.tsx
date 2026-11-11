@@ -1,4 +1,4 @@
-/** ProjectsSection renders the portfolio's current case-study placeholder. */
+// ProjectsSection — организм: раздел проектов, пока с заглушкой вместо работ.
 import { DisplayHeading } from '../atoms/DisplayHeading'
 import { SectionLabel } from '../atoms/SectionLabel'
 

@@ -1,4 +1,4 @@
-/** Section IDs and labels shared by the page navigation components. */
+// Названия и id разделов, общие для разных вариантов навигации.
 export const navigation = [
   { id: 'about', label: 'About' },
   { id: 'projects', label: 'Projects' },

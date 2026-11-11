@@ -1,4 +1,4 @@
-/** SectionIndex renders the numbered desktop list or compact mobile navigation. */
+// SectionIndex — молекула: навигация по разделам для компьютера и телефона.
 import styled, { css } from 'styled-components'
 import { navigation } from '../../data/navigation'
 
@@ -7,6 +7,7 @@ type SectionIndexProps = {
   variant: 'desktop' | 'mobile'
 }
 
+// $variant выбирает стили для десктопного или мобильного меню, не попадая в HTML.
 const IndexNavigation = styled.nav<{ $variant: SectionIndexProps['variant'] }>`
   ${({ $variant }) =>
     $variant === 'mobile' &&
@@ -57,7 +58,7 @@ const IndexLink = styled.a<{ $active: boolean; $variant: SectionIndexProps['vari
   min-width: ${({ $variant }) => ($variant === 'desktop' ? '0' : '44px')};
   min-height: ${({ $variant }) => ($variant === 'desktop' ? 'auto' : '44px')};
   padding: ${({ $variant }) => ($variant === 'desktop' ? '5px 0' : '15px 0 13px')};
-  color: ${({ $active }) => ($active ? 'var(--ink)' : 'var(--muted)')};
+  color: ${({ $active }) => ($active ? 'var(--pink)' : 'var(--muted)')};
   font-size: ${({ $variant }) => ($variant === 'desktop' ? '11px' : '10px')};
   font-weight: 600;
   letter-spacing: 0.14em;

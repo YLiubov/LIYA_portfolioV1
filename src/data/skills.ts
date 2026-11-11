@@ -1,4 +1,4 @@
-/** Technology groups displayed in the Skills section. */
+// Группы технологий и инструментов для раздела Skills.
 export const skillGroups = [
   { area: 'Frontend', tools: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'React'] },
   { area: 'Styling & routing', tools: ['Styled Components', 'React Router'] },

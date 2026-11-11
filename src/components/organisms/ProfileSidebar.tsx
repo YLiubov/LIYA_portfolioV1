@@ -1,14 +1,12 @@
-/** ProfileSidebar renders the desktop profile, section links, and theme selector. */
+// ProfileSidebar — организм: профиль и навигация в боковом меню на компьютере.
 import styled from 'styled-components'
 import { SectionIndex } from '../molecules/SectionIndex'
 import type { ColorTheme } from '../molecules/ThemeToggle'
-import { ThemeToggle } from '../molecules/ThemeToggle'
 import { Wordmark } from '../molecules/Wordmark'
 
 type ProfileSidebarProps = {
   activeSection: string
   theme: ColorTheme
-  onThemeChange: (theme: ColorTheme) => void
 }
 
 const Sidebar = styled.aside`
@@ -78,16 +76,9 @@ const Availability = styled.p`
   }
 `
 
-const SidebarFooter = styled.div`
-  display: grid;
-  justify-items: start;
-  gap: 20px;
-`
-
 export function ProfileSidebar({
   activeSection,
   theme,
-  onThemeChange,
 }: ProfileSidebarProps) {
   return (
     <Sidebar aria-label="Portfolio profile and section navigation">
@@ -103,10 +94,7 @@ export function ProfileSidebar({
 
       <SectionIndex activeSection={activeSection} variant="desktop" />
 
-      <SidebarFooter>
-        <ThemeToggle theme={theme} onChange={onThemeChange} />
-        <Availability>Open to a first junior frontend opportunity</Availability>
-      </SidebarFooter>
+      <Availability>Open to a first junior frontend opportunity</Availability>
     </Sidebar>
   )
 }

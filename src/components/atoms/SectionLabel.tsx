@@ -1,4 +1,4 @@
-/** SectionLabel renders the numbered eyebrow label above a page section. */
+// SectionLabel — атом: показывает номер и название раздела над заголовком.
 import styled from 'styled-components'
 
 type SectionLabelProps = {

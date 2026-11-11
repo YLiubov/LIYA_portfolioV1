@@ -1,4 +1,4 @@
-/** SiteFooter renders portfolio attribution and a link back to the page top. */
+// SiteFooter — организм: подвал сайта с подписью и ссылкой наверх.
 export function SiteFooter() {
   return (
     <footer className="site-footer">

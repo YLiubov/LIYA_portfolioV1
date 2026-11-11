@@ -1,4 +1,4 @@
-/** Browser entry point that mounts the React application. */
+// Точка входа: подключает общие стили и отображает App в элементе root.
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'

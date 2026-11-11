@@ -1,4 +1,4 @@
-/* Global font faces, browser defaults, focus styling, and reduced-motion behavior. */
+/* Общие шрифты, базовая палитра и стили страницы. */
 @import '@fontsource/dm-sans/latin-400.css';
 @import '@fontsource/dm-sans/latin-ext-400.css';
 @import '@fontsource/dm-sans/latin-600.css';
@@ -8,14 +8,27 @@
 @import '@fontsource/space-mono/latin-400.css';
 @import '@fontsource/space-mono/latin-ext-400.css';
 
+/* Основные цвета задаются здесь; RGB-значения используются для прозрачных оттенков. */
 :root {
   --font-body: 'DM Sans', Arial, Helvetica, sans-serif;
   --font-display: 'Space Mono', monospace;
   --font-italic: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --palette-paper: #fdfbf8;
+  --palette-night: #19131d;
+  --palette-plum: #48304d;
+  --palette-pink: #f865b0;
+  --palette-blush: #f6c5e8;
+  --palette-mint: #a9c1b9;
+  --palette-paper-rgb: 253 251 248;
+  --palette-night-rgb: 25 19 29;
+  --palette-plum-rgb: 72 48 77;
+  --palette-pink-rgb: 248 101 176;
+  --palette-blush-rgb: 246 197 232;
+  --palette-mint-rgb: 169 193 185;
 
   font-family: var(--font-body);
-  color: #2f2731;
-  background: #fdfbf8;
+  color: var(--palette-plum);
+  background: var(--palette-paper);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -25,18 +38,20 @@
   scroll-behavior: smooth;
 }
 
+:root:has(.site[data-theme='dark']) {
+  background-color: var(--palette-night);
+}
+
 * {
   box-sizing: border-box;
 }
 
 html {
-  min-width: 320px;
   min-height: 100%;
   scroll-padding-top: 20px;
 }
 
 body {
-  min-width: 320px;
   min-height: 100vh;
   margin: 0;
 }
@@ -57,7 +72,7 @@ svg {
 }
 
 :focus-visible {
-  outline: 2px solid #e637bf;
+  outline: 2px solid var(--palette-pink);
   outline-offset: 4px;
 }
 

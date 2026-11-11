@@ -1,4 +1,4 @@
-/** SiteHeader renders the responsive top navigation, theme switch, and logo. */
+// SiteHeader — организм: шапка с логотипом, меню и переключателем темы.
 import { useCallback, useLayoutEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import { navigation } from '../../data/navigation'
@@ -86,6 +86,7 @@ const NavigationIndicator = styled.span`
   }
 `
 
+// Десктопное меню измеряет активную ссылку, чтобы плавно перемещать подчёркивание.
 function DesktopNavigation({ activeSection }: { activeSection: string }) {
   const navRef = useRef<HTMLElement | null>(null)
   const linkRefs = useRef<Record<string, HTMLAnchorElement | null>>({})
@@ -107,6 +108,7 @@ function DesktopNavigation({ activeSection }: { activeSection: string }) {
     })
   }, [selectedSection])
 
+  // Пересчитываем положение индикатора после изменения активной ссылки или размера меню.
   useLayoutEffect(() => {
     updateIndicator()
     const nav = navRef.current

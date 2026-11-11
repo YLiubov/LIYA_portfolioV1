@@ -1,8 +1,9 @@
-/** Wordmark renders the responsive logo, theme colors, and blinking cursor. */
+// Wordmark — молекула: логотип со ссылкой наверх и мигающим курсором.
 import styled from 'styled-components'
 import wordmark from '../../assets/Wordmark.svg?raw'
 import type { ColorTheme } from './ThemeToggle'
 
+// Для тёмной темы заменяем цвета непосредственно в тексте SVG.
 const darkWordmark = wordmark
   .replaceAll('#48304D', '#D2F1E4')
   .replaceAll('#725F77', '#D2F1E4')
@@ -14,13 +15,19 @@ const WordmarkLink = styled.a`
   width: fit-content;
 
   img {
-    width: min(213px, 100%);
+    width: min(240px, 100%);
     height: auto;
   }
 
   @media (max-width: 900px) {
     img {
-      width: min(180px, 44vw);
+      width: min(205px, 52vw);
+    }
+  }
+
+  @media (max-width: 360px) {
+    img {
+      width: min(150px, 46vw);
     }
   }
 `
